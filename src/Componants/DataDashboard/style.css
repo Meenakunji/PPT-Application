@@ -1,0 +1,48 @@
+/* Dashboard.css */
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    /* background: #f9f9f9; */
+    background-color: white;
+  }
+  
+  .data-table {
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    width: 100%;
+    /* background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px; */
+  }
+  
+  .data-table th,
+  .data-table td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .chart-container {
+    width: 100%;
+    max-width: 650px;
+    max-height: 700px;
+    /* background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px; */
+  }
+  

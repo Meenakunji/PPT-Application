@@ -1,0 +1,43 @@
+   .presentation-selector-container {
+    font-family: 'Arial', sans-serif;
+    /* max-width: 500px; */
+    width: 56%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .presentation-selector-heading {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .presentation-selector-options {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .presentation-selector-option {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    outline: none;
+    font-size: 14px;
+    width: 48%; 
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .presentation-selector-option:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    background-color: #f8f8f8;
+  }
+  .presentation-selector-para{
+    margin-bottom: 20px;
+  }
+  
