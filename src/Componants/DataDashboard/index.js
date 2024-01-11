@@ -32,9 +32,9 @@ const Dashboard = ({ showContent }) => {
       { title: "Uplit", values: [800, 900, 900, 1400, 4100] },
       { title: "Prior Period Adj", values: [-400, -200, 0, 0, -600] },
       { title: "Churn", values: [-1100, -1100, -900, -600, -3700] },
-      { title: "Downsell", values: [1200, 700, 1100, 1300, 4300] },
-      { title: "Live ARR EOP", values: [4800, 4900, 50900, 53500, 53500] },
-      { title: "CC", values: [2350, 2150, 2150, 2150, 2150] },
+      // { title: "Downsell", values: [1200, 700, 1100, 1300, 4300] },
+      // { title: "Live ARR EOP", values: [4800, 4900, 50900, 53500, 53500] },
+      // { title: "CC", values: [2350, 2150, 2150, 2150, 2150] },
       {
         title: "OT Booking Annual Estimate",
         values: [7826, 7777, 7818, 8147, 8147],
@@ -78,10 +78,7 @@ const Dashboard = ({ showContent }) => {
   };
 
   return (
-    <div className="toolbar-container">
-      <div className="toolbar-title">
-        $0.3m ARR gap to close in Q3 in order to hit Q3 Board target
-      </div>
+      
       <div className="dashboard-container">
         {showContent ? (
           <table className="data-table">
@@ -104,13 +101,8 @@ const Dashboard = ({ showContent }) => {
             </tbody>
           </table>
         ) : null}
-        {showContent ? (
-          <div className="chart-container">
-            <Bar data={chartData} options={chartOptions} />
-          </div>
-        ) : null}
-      </div>
-    </div>
+       
+       </div>
   );
 };
 

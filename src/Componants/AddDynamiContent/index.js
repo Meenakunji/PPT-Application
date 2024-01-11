@@ -1,41 +1,54 @@
 import React, { useState } from "react";
 import "./style.css"; 
+import Dashboard from "../DataDashboard";
 
-const ToolbarComponent = () => {
-  const [inputValue, setInputValue] = useState("");
-  const [displayValue, setDisplayValue] = useState("");
+const ToolbarComponent = ({handleShowContainetModal, clickCountArray, showContent, selectedOption }) => {
 
-  const handleInputChange = (e) => {
-    setInputValue(e.target.value);
-  };
+  const [inputText, setInputText] = useState("");
 
   const handleButtonClick = () => {
-    setDisplayValue(inputValue);
+    handleShowContainetModal();
   };
+
+  const handleInputChange = (e) => {
+    setInputText(e.target.value); // Update the inputText state with the new value
+  };
+
 
   return (
     <div className="toolbar-container">
       <div className="toolbar-title">
         $0.3m ARR gap to close in Q3 in order to hit Q3 Board target
       </div>
-      <div className="body-box">
-        <div style={{ display: "flex", gap: "13px" }}>
-          <input
-            type="text"
-            className="toolbar-input"
-            value={inputValue}
-            onChange={handleInputChange}
-            placeholder="Add Dynamic Content"
-          />
+      <div className="body-box-dash">
+      {clickCountArray.map((index)=>(
+            <div key={index}>
+              <Dashboard showContent={showContent} selectedOption={selectedOption} /> 
+            </div>
+         ))}
+       </div>
+        <div className="footer-box">
+          {(selectedOption==='commentary')?(
+            <input 
+              type="text" 
+              value={inputText} 
+              onChange={handleInputChange} 
+              className="text-input"
+              placeholder="add comment"
+            />):(null)}
+
           <button className="toolbar-button" onClick={handleButtonClick}>
             <span className="button-icon">⚡️</span>{" "}
             {/* Replace with actual icon */}
             Add
           </button>
         </div>
-        {displayValue && <div className="display-value">{displayValue}</div>}
-      </div>
+        {(selectedOption==='commentary')?(<div className="comment-box">
+          {inputText}
+      </div>):(null)}
+      
     </div>
+  
   );
 };
 

@@ -10,7 +10,8 @@
     justify-content: space-between;
     align-items: center;
     margin: 20px;
-    width: 60%;
+    height: 650px;
+    /* width: 60%; */
   }
   
   .toolbar-title {
@@ -20,10 +21,10 @@
     border-radius: 5px;
     color: white;
   }
-  .Body-box{
+  .body-box-dash{
     display: flex;
     flex-direction: row;
-    height: 448px;
+    /* height: 448px; */
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -59,13 +60,7 @@
 
 /* ... other styles ... */
 
-.body-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    height: 413px;
-    justify-content: center; /* Align items to the start of the flex container */
-  }
+
   
   .toolbar-input {
     margin-bottom: 10px; /* Space between input and button */
@@ -83,4 +78,13 @@
     width: 100%; /* Full width */
     box-sizing: border-box;
   }
+  .footer-box{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
   
+  .comment-box{
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }

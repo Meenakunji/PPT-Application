@@ -2,20 +2,24 @@ import React from "react";
 import "./style.css";
 
 const DynamicContentModal = ({
+  showContainetModal,
+  setshowContainetModal,
   selectedOption,
   handleOptionChange,
   handleShowContent,
 }) => {
+
+  if(!showContainetModal){
+    return null;
+  }
+
   return (
-    <div className="toolbar-container">
-      <div className="toolbar-title">
-        $0.3m ARR gap to close in Q3 in order to hit Q3 Board target
-      </div>
+      <div className="conatinet-conatiner">
       <div className="modal-background">
         <div className="modal-container">
           <div className="modal-header">
             Add Dynamic Content
-            <button className="close-button">&times;</button>
+            <button className="close-button" onClick={handleShowContent} >&times;</button>
           </div>
           <div className="options-container">
             <div className="option">
@@ -55,7 +59,7 @@ const DynamicContentModal = ({
           </div>
         </div>
       </div>
-    </div>
+      </div>
   );
 };
 

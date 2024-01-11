@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./style.css"; 
 
-const FileSelectorModal = ({ showModal, setShowModal }) => {
+const FileSelectorModal = ({ showModal, setShowModal, handleSelect }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
   const fileNameArray = [
@@ -73,7 +73,7 @@ const FileSelectorModal = ({ showModal, setShowModal }) => {
           </div>
         </div>
         <div className="file-selector-footer">
-          <button className="select-button" onClick={handleCancel}>
+          <button className="select-button" onClick={handleSelect}>
             Select
           </button>
           <button className="cancel-button" onClick={handleCancel}>

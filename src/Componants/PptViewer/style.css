@@ -1,0 +1,16 @@
+.ppt-viewer{
+    font-family: 'Arial', sans-serif;
+    /* max-width: 500px; */
+    width: 468px;
+    height: 451px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.ppt-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 20px;
+}
