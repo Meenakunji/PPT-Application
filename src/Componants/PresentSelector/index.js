@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css"; 
 
-const PresentationSelector = ({ handleShow }) => {
+const PresentationSelector = ({handleStep, step}) => {
   return (
     <div className="presentation-selector-container">
       <div className="presentation-selector-heading">
@@ -14,7 +14,7 @@ const PresentationSelector = ({ handleShow }) => {
       <div className="presentation-selector-options">
         <button
           className="presentation-selector-option"
-          onClick={() => handleShow()}
+          onClick={() => handleStep(step)}
         >
           Start from an existing presentation
         </button>

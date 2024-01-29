@@ -10,3 +10,9 @@
   /* gap: 30px; */
   justify-content: center;
 }
+.step-4-box{
+  display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 25px;
+}
