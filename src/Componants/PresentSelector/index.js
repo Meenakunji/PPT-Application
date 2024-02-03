@@ -1,15 +1,21 @@
 import React from "react";
 import "./style.css"; 
 
-const PresentationSelector = ({handleStep, step}) => {
+const PresentationSelector = ({handleStep, step, savedPresenataion}) => {
   return (
     <div className="presentation-selector-container">
-      <div className="presentation-selector-heading">
+      {savedPresenataion?(<div className="presentation-selector-heading">
+      presentation Saved!
+      </div>):(<div className="presentation-selector-heading">
         Select presentation template
-      </div>
-      <div className="presentation-selector-para">
+      </div>)}
+
+      {savedPresenataion?( <div className="presentation-selector-para">
+      Let's Start Another Perseantation.
+      </div>):( <div className="presentation-selector-para">
         Describe what role the presentation template play in this whole thing.
-      </div>
+      </div>)}
+      
 
       <div className="presentation-selector-options">
         <button
